@@ -12,6 +12,7 @@ RUN wget https://busybox.net/downloads/busybox-1.35.0.tar.bz2 \
 # Create a non-root user to own the files and run our server
 RUN adduser -D static 
 
+
 # Gettin the web dev CA
 RUN wget https://github.com/marcelomegale/site_cbwa/archive/master.tar.gz && tar xf master.tar.gz && rm master.tar.gz && mv /site_cbwa-master /home/static
 
