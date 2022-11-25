@@ -12,7 +12,7 @@ RUN npm install
 RUN adduser -D static 
 
 # Gettin the web dev CA
-RUN wget https://github.com/marcelomegale/cbwa_ca2/archive/master.tar.gz && tar xf master.tar.gz && rm master.tar.gz && mv /site_cbwa-master /home/static
+RUN wget https://github.com/marcelomegale/mobdev_ca3/archive/master.tar.gz && tar xf master.tar.gz && rm master.tar.gz && mv /site_cbwa-master /home/static
 
 #app folder
 WORKDIR /app/cbwa_ca2-main/
@@ -33,4 +33,4 @@ WORKDIR /home/static
 WORKDIR /home/static/site_cbwa-master
 
 RUN rm -rf /usr/share/nginx/html/*
-COPY --from=build app/site_cbwa-main//www/ /usr/share/nginx/html/
+COPY --from=build app/mobdev_ca3-main//www/ /usr/share/nginx/html/
